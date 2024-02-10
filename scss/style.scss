@@ -1,0 +1,114 @@
+@use 'fonts'; //fonts 
+@use 'varibels' as c; // varibles 
+@use 'buttons' ;
+@use 'cards';
+@use 'devices';
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: c.$bg;
+  color : c.$fg;
+}
+
+//logo
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  & h1 {
+  font-family: 'Liber-barcode' , sans-serif;
+    font-size: clamp(4rem, 3vw, 5rem);
+  }
+}
+
+#bars {
+  display: none;
+}
+
+.toggle_light {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+//mobile display
+.mobile_menu{
+  display:none;
+}
+
+// navbar  
+
+.nav_bar {
+  padding: 10px 0;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: 'Roboto', sans-serif;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+    }
+    & li:hover {
+      @include buttons.home_button();
+      }
+  }
+
+}
+
+.center {
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.card {
+  @include cards.card;
+}
+
+#toggle_icon {
+  @include buttons.day_night();
+}
+
+
+//small screan 
+@include devices.sscrean(768px , max-width) {
+  .nav_bar {
+    display: none;
+    
+  }
+  .mobile_menu {
+    i {
+      font-size: 2rem;
+      color: c.$fg;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+    }
+    li {
+      text-align: center;
+      padding: 10px 0;
+      background-color: c.$bg;
+      color: c.$fg;
+      width: 100%;
+      margin: 5px 0;
+      font-family: 'Arial', sans-serif;
+    }
+  }
+  #bars {
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    color: c.$fg;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 10px 0;
+    right: 10px;
+    top: 20px;
+    
+  }
+
+}
+

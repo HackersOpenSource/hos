@@ -1,0 +1,18 @@
+// small display
+@mixin sscrean($width , $size ) {
+  @media ($size: $width) {
+    @content;
+  }
+}
+// medium display
+@mixin mscreen($width , $size ) {
+  @media ($size: $width) {
+    @content;
+  }
+}
+// large display
+@mixin lscreen($width , $size ) {
+  @media ($size: $width) {
+    @content;
+  }
+}

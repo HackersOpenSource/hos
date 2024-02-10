@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Liber-barcode";
+  src: url("/fonts/LibreBarcode_v1.008/LibreBarcode39ExtendedText-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #00ff00;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.logo h1 {
+  font-family: "Liber-barcode", sans-serif;
+  font-size: clamp(4rem, 3vw, 5rem);
+}
+
+#bars {
+  display: none;
+}
+
+.toggle_light {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mobile_menu {
+  display: none;
+}
+
+.nav_bar {
+  padding: 10px 0;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-family: "Roboto", sans-serif;
+}
+.nav_bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.nav_bar ul li {
+  margin: 0 10px;
+}
+.nav_bar ul li:hover {
+  font-size: clamp(1.1rem, 3vw, 2.5rem);
+  color: #fff;
+  padding: 6px;
+  margin: 0 10px;
+  transition: 0.6s;
+  box-shadow: -5px -5px 10px 3px rgba(0, 255, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.center {
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.card {
+  color: #fff;
+  padding: 6px;
+  margin: 10px 30px;
+  transition: 0.6s;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+#toggle_icon {
+  font-size: 30px;
+  position: fixed;
+  bottom: 102px;
+  right: 10px;
+  border: 2px solid #55a6ff;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #55a6ff;
+  color: #000000;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav_bar {
+    display: none;
+  }
+  .mobile_menu i {
+    font-size: 2rem;
+    color: #00ff00;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+  .mobile_menu li {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000000;
+    color: #00ff00;
+    width: 100%;
+    margin: 5px 0;
+    font-family: "Arial", sans-serif;
+  }
+  #bars {
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    color: #00ff00;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 10px 0;
+    right: 10px;
+    top: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
